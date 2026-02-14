@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story | 121925</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link href="haha.css" rel="stylesheet">
+</head>
+<body data-theme="dark">
+
+    <div id="loader">
+        <div class="loader-heart">❤️</div>
+        <div class="loading-text">PREPARING YOUR SURPRISE...</div>
+        <div class="progress-container"><div class="progress-bar" id="bar"></div></div>
+    </div>
+
+    <div id="custom-cursor"></div>
+    <div id="cursor-outline"></div>
+
+    <button class="back-btn" id="global-back-btn" onclick="goBackToMain()">← BACK</button>
+
+    <div class="controls">
+        <button class="icon-btn" onclick="toggleTheme()" id="theme-btn">☀️</button>
+    </div>
+
+    <div id="lock-screen">
+        <div class="podlock-box" id="pod-box">
+            <div class="heart-lock">❤️</div>
+            <p style="font-size: 0.7rem; letter-spacing: 2px; color: var(--accent); margin-top: 15px;">ENTER THE DATE</p>
+            <input type="password" id="pass-field" placeholder="000000" maxlength="6">
+            <div id="hint"></div>
+            <span id="forgot-pw" onclick="forgotPw()">NO IDEA?</span>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+        <h1>Happy Valentine's bebe</h1>
+        <div id="question-container">
+            <button id="timer-question-btn" onclick="revealTimer()">
+                🌷 How long have we been? 🌷
+            </button>
+        </div>
+        
+        <div id="timer-section">
+            <div class="timer-container">
+                <div class="timer-grid">
+                    <div class="timer-box"><div id="days">00</div><span>DAYS</span></div>
+                    <div class="timer-box"><div id="hours">00</div><span>HOURS</span></div>
+                    <div class="timer-box"><div id="mins">00</div><span>MINS</span></div>
+                    <div class="timer-box"><div id="secs">00</div><span>SECS</span></div>
+                </div>
+            </div>
+
+            <div id="love-meter-area">
+                <div id="giant-heart">❤️</div>
+                <span id="love-percent">100% Love</span>
+                <button class="meter-btn" id="love-btn" onclick="increaseLove()">How much do I love you?</button>
+            </div>
+
+            <div id="game-area">
+                <p style="font-size: 1rem; color: var(--accent); margin-bottom: 25px;">Wait, there is a special message for you...</p>
+                <div class="btn-container">
+                    <button id="open-btn" onclick="showFinalReveal()">OPEN ME</button>
+                    <button id="ignore-btn" style="background:transparent; border:1px solid var(--text); color:var(--text); padding:12px 30px; border-radius:50px;" onmouseover="moveIgnore()">IGNORE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="final-message-screen">
+        <div class="message-container">
+            <div id="message-text" class="long-message"></div>
+        </div>
+
+        <div id="scratch-wrapper">
+            <p style="color: var(--accent); margin-bottom: 25px; font-weight: 600;">One last surprise... Scratch the photo! ❤️</p>
+            <div class="polaroid-frame">
+                <div id="scratch-container">
+                    <div class="scratch-reveal-content">
+                        <img src="haha.jpg" alt="Secret Surprise">
+                    </div>
+                    <canvas id="scratch-canvas"></canvas>
+                </div>
+                <p style="color: #333; font-family: 'Great Vibes', cursive; font-size: 1.5rem; margin-top: 15px;">Flowers fo you hehe</p>
+            </div>
+        </div>
+        
+        <div style="margin-top: 50px;"><button class="icon-btn" style="width: auto; padding: 0 30px; border-radius: 50px; cursor: pointer;" onclick="celebrate()">BLOOM AGAIN 🌷</button></div>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>
